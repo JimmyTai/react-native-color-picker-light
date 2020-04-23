@@ -1,6 +1,6 @@
 {
   "name": "react-native-color-picker-light",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "This library is designed for IoT Light. We provide two mode, one is white mode, another is color mode.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -26,7 +26,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "color-picker"
   ],
   "repository": "https://github.com/JimmyTai/react-native-color-picker-light",
   "author": "JimmyTai <jimmytai0315@hotmail.com> (https://github.com/JimmyTai)",
@@ -105,7 +106,10 @@
       "tagName": "v%s"
     },
     "npm": {
-      "publish": true
+      "publish": true,
+      "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+      }
     },
     "github": {
       "release": false
