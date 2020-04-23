@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.ColorPickerLightExample">
+  package="com.color_picker_light_example">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

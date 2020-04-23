@@ -28,6 +28,7 @@ const ColorPickerView: React.RefForwardingComponent<ColorPickerRef, Props> = (
 
   useImperativeHandle(ref, () => ({
     setColor: (color: string) => {
+      console.log('set color');
       UIManager.dispatchViewManagerCommand(
         findNodeHandle(view.current),
         UIManager.getViewManagerConfig(

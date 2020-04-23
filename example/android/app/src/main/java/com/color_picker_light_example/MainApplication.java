@@ -1,4 +1,4 @@
-package com.ColorPickerLightExample;
+package com.color_picker_light_example;
 
 import android.app.Application;
 import android.content.Context;

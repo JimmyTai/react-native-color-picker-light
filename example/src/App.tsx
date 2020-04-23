@@ -18,7 +18,7 @@ const App = () => {
       <SafeAreaView>
         <ColorPicker
           ref={colorPicker}
-          type="color"
+          type="white"
           style={styles.colorPicker}
           onColorChange={color => {
             console.log('color:', color);
