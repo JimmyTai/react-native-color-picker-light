@@ -9,8 +9,10 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "@react-native-community/slider": "^2.0.9",
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-svg": "^12.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
