@@ -8,13 +8,16 @@
 
 ## Demo
 
+
 - **iOS Style**
 
-![iOS white picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-white.png?raw=true =250x) ![iOS Color Picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-color.png?raw=true =250x)
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-white.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-color.png?raw=true" alt="drawing" width="250"/>
 
 - **Android Style**
 
-![iOS white picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-white.png?raw=true =250x) ![iOS Color Picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-color.png?raw=true =250x)
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-white.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-color.png?raw=true" alt="drawing" width="250"/>
 
 ## Install
 
@@ -31,18 +34,25 @@ cd ios
 pod install
 ```
 ### Very Important !!!
+
 Because this library is written by Swift, you have to create **Bridge-Header**.
+
 - First, you should open the project in XCode. Then click new file.
-![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_01.png?raw=true =650x)
+
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_01.png?raw=true" alt="drawing" width="70%"/>
+
 
 - Select Swift File, then click next.
-![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_02.png?raw=true =650x)
+
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_02.png?raw=true" alt="drawing" width="70%"/>
 
 - Name the file as Dummy.swift and click create.
-![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_03.png?raw=true =650x)
+
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_03.png?raw=true" alt="drawing" width="70%"/>
 
 - Finally, Xcode will ask you do you want to create bridge header. Please select Create Bridging Header.
-![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_04.png?raw=true =650x)
+
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_04.png?raw=true" alt="drawing" width="70%"/>
 
 ## Usage
 ```ts
