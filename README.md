@@ -1,23 +1,110 @@
 # react-native-color-picker-light
 
-This library is designed for IoT Light. We provide two mode, one is white mode, another is color mode.
+> This color picker component for React Native is designed for IoT light controlling function. Therefore we provide two mode. One is for white light mode, another is for color light mode. 
 
-## Installation
+[![NPM](https://img.shields.io/npm/v/react-native-color-picker-light.svg)](https://www.npmjs.com/package/react-native-color-picker-light) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-```sh
+## Tutorial
+
+## Demo
+
+- **iOS Style**
+
+![iOS white picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-white.png?raw=true =250x) ![iOS Color Picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-color.png?raw=true =250x)
+
+- **Android Style**
+
+![iOS white picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-white.png?raw=true =250x) ![iOS Color Picker](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-color.png?raw=true =250x)
+
+## Install
+
+```bash
 npm install react-native-color-picker-light
+
+or
+
+yarn add react-native-color-picker-light
 ```
+and install cocoapods
+```bash
+cd ios
+pod install
+```
+### Very Important !!!
+Because this library is written by Swift, you have to create **Bridge-Header**.
+- First, you should open the project in XCode. Then click new file.
+![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_01.png?raw=true =650x)
+
+- Select Swift File, then click next.
+![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_02.png?raw=true =650x)
+
+- Name the file as Dummy.swift and click create.
+![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_03.png?raw=true =650x)
+
+- Finally, Xcode will ask you do you want to create bridge header. Please select Create Bridging Header.
+![enter image description here](https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/xcode_setup_04.png?raw=true =650x)
 
 ## Usage
+```ts
+const picker = useRef();
 
-```js
-import ColorPickerLight from "react-native-color-picker-light";
+<ColorPicker
+  ref={picker}
+  type="color"
+  style={{ width: 200, height: 200 }}
+  onColorChange={color  => {
+	console.log('color:', color);
+  }}
+/>
 
-// ...
+picker.current.setColor('#f0ce78');
 
-const deviceName = await ColorPickerLight.getDeviceName();
 ```
+
+## Props
+
+### `type`
+
+Used to choose which type of picker you want.
+
+| Type       | Required | default |
+| ---------- | -------- | ------- |
+| color \| white | No   | color   |
+
+---
+### `onColorChange`
+
+Callback that is called when the user select a color.
+
+| Type       | Required | default |
+| ---------- | -------- | ------- |
+| function   | No       | null    |
+
+---
 
 ## License
 
-MIT
+MIT License
+
+Copyright (c) 2020  [JimmyTai](https://github.com/JimmyTai).
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the “Software”), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
