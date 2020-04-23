@@ -11,13 +11,11 @@
 
 - **iOS Style**
 
-<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-white.png?raw=true" alt="drawing" width="250"/>
-<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-color.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-white.png?raw=true" alt="drawing" width="250"/> <img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-color.png?raw=true" alt="drawing" width="250"/>
 
 - **Android Style**
 
-<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-white.png?raw=true" alt="drawing" width="250"/>
-<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-color.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-white.png?raw=true" alt="drawing" width="250"/> <img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-color.png?raw=true" alt="drawing" width="250"/>
 
 ## Install
 
