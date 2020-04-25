@@ -1,6 +1,6 @@
 {
   "name": "react-native-color-picker-light",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This library is designed for IoT Light. We provide two mode, one is white mode, another is color mode.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
