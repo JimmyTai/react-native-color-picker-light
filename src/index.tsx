@@ -14,6 +14,7 @@ export interface ColorPickerRef {
 interface Props {
   style?: StyleProp<ViewStyle>;
   type?: 'color' | 'white';
+  onInit?: () => void;
   onColorChange?: (color: string) => void;
 }
 
@@ -21,14 +22,13 @@ const RCTColorPickerView = requireNativeComponent('RCTColorPickerView');
 const RCTWhitePickerView = requireNativeComponent('RCTWhitePickerView');
 
 const ColorPickerView: React.RefForwardingComponent<ColorPickerRef, Props> = (
-  { style, type = 'color', onColorChange },
+  { style, type = 'color', onInit, onColorChange },
   ref
 ) => {
   const view = useRef<any>(null);
 
   useImperativeHandle(ref, () => ({
     setColor: (color: string) => {
-      console.log('set color');
       UIManager.dispatchViewManagerCommand(
         findNodeHandle(view.current),
         UIManager.getViewManagerConfig(
@@ -44,11 +44,15 @@ const ColorPickerView: React.RefForwardingComponent<ColorPickerRef, Props> = (
       <RCTColorPickerView
         ref={view}
         style={style}
-        onColorChange={(event: any) => {
-          if (!onColorChange) {
-            return;
+        onInit={() => {
+          if (onInit) {
+            onInit();
           }
-          onColorChange(event.nativeEvent.color);
+        }}
+        onColorChange={(event: any) => {
+          if (onColorChange) {
+            onColorChange(event.nativeEvent.color);
+          }
         }}
       />
     );
@@ -57,11 +61,15 @@ const ColorPickerView: React.RefForwardingComponent<ColorPickerRef, Props> = (
       <RCTWhitePickerView
         ref={view}
         style={style}
-        onColorChange={(event: any) => {
-          if (!onColorChange) {
-            return;
+        onInit={() => {
+          if (onInit) {
+            onInit();
           }
-          onColorChange(event.nativeEvent.color);
+        }}
+        onColorChange={(event: any) => {
+          if (onColorChange) {
+            onColorChange(event.nativeEvent.color);
+          }
         }}
       />
     );

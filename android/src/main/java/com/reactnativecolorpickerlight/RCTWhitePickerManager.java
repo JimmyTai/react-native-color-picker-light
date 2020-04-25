@@ -6,7 +6,6 @@ import android.view.View;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.MapBuilder;
@@ -44,13 +43,25 @@ public class RCTWhitePickerManager extends SimpleViewManager {
   @Override
   protected View createViewInstance(@NonNull ThemedReactContext reactContext) {
     WhiteColorPicker picker = new WhiteColorPicker(reactContext);
-    picker.setOnColorSelectedListener(color -> {
-      WritableMap event = Arguments.createMap();
-      event.putString("color", String.format("#%06x", (0xFFFFFF & color)));
-      reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
-        picker.getId(),
-        "colorChange",
-        event);
+    picker.setWhitePickerListener(new WhiteColorPicker.OnWhiteColorPickerListener() {
+      @Override
+      public void onInitialized() {
+        WritableMap event = Arguments.createMap();
+        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
+          picker.getId(),
+          "initialized",
+          event);
+      }
+
+      @Override
+      public void onColorSelected(int color) {
+        WritableMap event = Arguments.createMap();
+        event.putString("color", String.format("#%06x", (0xFFFFFF & color)));
+        reactContext.getJSModule(RCTEventEmitter.class).receiveEvent(
+          picker.getId(),
+          "colorChange",
+          event);
+      }
     });
     return picker;
   }
@@ -60,6 +71,7 @@ public class RCTWhitePickerManager extends SimpleViewManager {
   public Map<String, Object> getExportedCustomBubblingEventTypeConstants() {
     MapBuilder.Builder<String, Object> builder = MapBuilder.builder();
     builder.put("colorChange", MapBuilder.of("phasedRegistrationNames", MapBuilder.of("bubbled", "onColorChange")));
+    builder.put("initialized", MapBuilder.of("phasedRegistrationNames", MapBuilder.of("bubbled", "onInit")));
     return builder.build();
   }
 

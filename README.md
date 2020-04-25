@@ -11,11 +11,13 @@
 
 - **iOS Style**
 
-<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-white.png?raw=true" alt="drawing" width="250"/> <img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-color.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-white.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/ios-color.png?raw=true" alt="drawing" width="250"/>
 
 - **Android Style**
 
-<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-white.png?raw=true" alt="drawing" width="250"/> <img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-color.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-white.png?raw=true" alt="drawing" width="250"/>
+<img src="https://github.com/JimmyTai/react-native-color-picker-light/blob/master/images/android-color.png?raw=true" alt="drawing" width="250"/>
 
 ## Install
 
@@ -80,6 +82,17 @@ Used to choose which type of picker you want.
 | color \| white | No   | color   |
 
 ---
+
+### `onInit`
+
+Callback that is called when picker is ready to use. **You should setColor after the picker finished.**
+
+| Type       | Required | default |
+| ---------- | -------- | ------- |
+| function   | No       | null    |
+
+---
+
 ### `onColorChange`
 
 Callback that is called when the user select a color.

@@ -10,9 +10,9 @@ const App = () => {
   const colorPicker = useRef<ColorPickerRef>(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      colorPicker.current?.setColor('#f0ce78');
-    }, 1000);
+    // setTimeout(() => {
+    //   colorPicker.current?.setColor('#f0ce78');
+    // }, 1000);
   }, []);
 
   return (
@@ -26,6 +26,10 @@ const App = () => {
           ref={colorPicker}
           type="color"
           style={styles.colorPicker}
+          onInit={() => {
+            console.log('color picker initialized');
+            colorPicker.current?.setColor('#f0ce78');
+          }}
           onColorChange={color => {
             console.log('color:', color);
           }}
